@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+    <main>
+        <div class="jumbotron">
+            <h1>Teste</h1>
+            <ul>
+                <% for(var i=0;i<teste.length;i++){ %>
+                    <li>
+                        <%= teste[i] %>
+                    </li>
+                    <% } %>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

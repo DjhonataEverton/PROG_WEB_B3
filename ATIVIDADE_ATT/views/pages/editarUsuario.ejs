@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <%- include(''../partials/head'); %>
+    </head>
+
+    <body>
+        <form action="/update/<%=email; %>" method= "POST">
+        <p>email:<%=email; %></p>
+        <input type="text" name="nome" placeholder="nome"/><br/>
+        <input type="password" name="senha" placeholder="senha"/><br/>
+        <input type="hidden" name="email" value="<%=email%>"/>
+        <input type="submit" value="editar"/>
+        </form>
+    </body>
+</html>

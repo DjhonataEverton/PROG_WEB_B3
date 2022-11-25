@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <%- include('../partials/navbar'); %>
+
+        <div style="display: flex; flex-direction: column;">
+
+            <div style="justify-content: flex-end; width: 70%; display: flex; margin: auto; margin-bottom: 20px;">
+                <a href="/variacoes/cadastrar" class="btn" role="button"
+                    style="background-color: #4b0082; color: #fff;">
+                    Cadastrar Variação </a>
+            </div>
+
+            <div style="width: 70%; margin: auto;">
+
+                <table class="table table-striped table-hover" style="width: 50%; margin: auto">
+                    <thead style="background-color: #4b0082; color: #fff;">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% if(variacao.length <=0) { %>
+                            <tr>
+                                <td colspan="5">Nao existe variação cadastrado</td>
+                            </tr>
+
+                            <% } else{ for(let i=0; i < variacao.length; i++) { %>
+
+                                <tr>
+                                    <td>
+                                        <%=variacao[i].tipo %>
+                                    </td>
+                                    <td>
+                                        <a href="/variacao/editar/<%=variacao[i].id;%>"><i class="bi-pencil"></i></a>
+                                        <a href="/variacao/deletar/<%=variacao[i].id;%>"><i class="bi-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <% } } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</body>
+
+</html>

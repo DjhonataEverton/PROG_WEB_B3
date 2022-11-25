@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <%- include('../partials/head' %>
+    </head>
+
+    <body>
+       <form action="/destroy" method="POST">
+            <input type="hidden" name="email" value="<%=email%>"/>
+            <p>deseja realmente remover o usuario?</p>
+            <input type="submit" value="deletar"/>
+       </form>
+
+       <form method="get" action="/usuarios">
+           <input type="submit" value="voltar"/>
+       </form>
+    </body>
+</html>

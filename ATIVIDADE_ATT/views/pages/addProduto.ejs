@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <%- include('../partials/navbar'); %>
+        <form action="/addProduto" method="POST">
+            <label for="nome"> Nome </label>
+            <input type="text" name="nome" id="nome" placeholder="Nome" /><br>
+            <label for="codigo"> Código </label>
+            <input type="text" name="codigo" id="codigo" placeholder="codigo" /><br>
+            <label for="preco"> Preço: </label>
+            <input type="number" name="preco" id="preco" placeholder="Preço" /><br>
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao"></textarea>
+            <input type="submit" value="cadastrar" />
+        </form>
+</body>
+
+</html>

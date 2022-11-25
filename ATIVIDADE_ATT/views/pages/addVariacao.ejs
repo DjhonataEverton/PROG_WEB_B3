@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <%- include('../partials/navbar'); %>
+        <form action="/addVariacao" method="POST">
+            <label for="tipo"> Tipo </label>
+            <input type="text" name="tipo" id="tipo" placeholder="Nome" /><br>
+            <label for="valor"> Valor </label>
+            <input type="text" name="valor" id="valor3" placeholder="Valor" /><br>
+            <label for="valor"> Valor </label>
+            <input type="text" name="valor" id="valor1" placeholder="Valor" /><br>
+            <label for="valor"> Valor </label>
+            <input type="text" name="valor" id="valor2" placeholder="Valor" /><br>
+            <input type="submit" value="cadastrar" />
+        </form>
+</body>
+
+</html>
